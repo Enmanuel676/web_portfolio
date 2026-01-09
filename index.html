@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Web</title>
+    <link rel="stylesheet" href="./style/index.css" />
+  </head>
+  <body>
+    <div class="bg-grid" aria-hidden="true"></div>
+
+    <!-- Controles flotantes -->
+    <div class="controls">
+      <button
+        class="control-btn"
+        id="btnTheme"
+        type="button"
+        title="Tema claro/oscuro"
+        aria-label="Cambiar tema"
+      >
+        🌓
+      </button>
+      <button
+        class="control-btn"
+        id="btnNav"
+        type="button"
+        title="Barra solid/glass"
+        aria-label="Cambiar estilo de navegación"
+      >
+        ▦
+      </button>
+    </div>
+
+    <!-- Sello (desktop) -->
+    <div class="stamp">
+      <div class="card stamp-card">
+        <div class="stamp-title">PORTFOLIO v1.0</div>
+      </div>
+    </div>
+
+    <main class="container">
+      <!-- HOME -->
+      <section id="home" class="section">
+        <div class="grid-hero">
+          <article class="card card-pad">
+            <div class="kicker muted">CUBA · 2026</div>
+            <h1 class="h1">Enmanuel</h1>
+            <p class="subhead">Estudiante de Desarrollo Web — TripleTen</p>
+            <p class="text muted">
+              Construyo apps web con enfoque práctico: UI limpia, lógica clara y
+              resultados medibles.
+            </p>
+
+            <div class="hero-actions">
+              <button class="btn btn-primary" data-scroll="#projects">
+                Ver proyectos
+              </button>
+              <a
+                class="btn btn-ghost"
+                href="https://drive.google.com/file/d/1UIIUVuQLVy6xK-FfcDNlozmYd71_q9Jh/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+                >CV</a
+              >
+              <a
+                class="btn btn-ghost"
+                href="https://github.com/Enmanuel676"
+                target="_blank"
+                rel="noreferrer"
+                >GitHub</a
+              >
+              <a
+                class="btn btn-ghost"
+                href="https://www.linkedin.com/in/enmanuel-hurtado-batista"
+                target="_blank"
+                rel="noreferrer"
+                >LinkedIn</a
+              >
+            </div>
+
+            <div class="divider-top small muted">
+              <b>Brutalismo minimalista</b>: alto contraste, bordes duros, pocas
+              florituras, mucha intención.
+            </div>
+          </article>
+
+          <article class="card card-pad">
+            <div class="kicker muted">STATUS</div>
+            <h2 class="h2">Disponible para empleo / junior</h2>
+            <p class="text muted">
+              Me enfoco en proyectos con APIs, componentes reutilizables y
+              fundamentos sólidos.
+            </p>
+
+            <div class="stack">
+              <div class="kicker muted">STACK ACTUAL</div>
+              <div class="chips">
+                <span class="chip">React</span>
+                <span class="chip">JavaScript</span>
+                <span class="chip">HTML</span>
+                <span class="chip">CSS</span>
+                <span class="chip">APIs</span>
+                <span class="chip">Git</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section section-gap">
+        <header class="section-header">
+          <div class="section-title-row">
+            <span class="tag">SOBRE MÍ</span>
+            <span class="line"></span>
+          </div>
+          <h2 class="h2">Aprendo rápido, construyo más rápido</h2>
+          <p class="text muted">
+            Texto corto, directo y creíble. Aquí no vendemos humo: mostramos
+            progreso real.
+          </p>
+        </header>
+
+        <div class="grid-2">
+          <article class="card card-pad">
+            <h3 class="h3 h3-about">Quién soy</h3>
+            <img
+              src="./src/person-photo.jpg"
+              alt="Person-Photo"
+              class="card card-photo"
+            />
+            <p class="text muted">
+              Soy desarrollador web en formación (Full Stack) con
+              especialización en Frontend, formado de manera práctica en la
+              academia de TripleTen. Me motiva crear experiencias de usuario que
+              sean intuitivas, funcionales y cuidadas, y me destaco por ser
+              meticuloso, aprender rápido y tener un enfoque constante en
+              mejorar la calidad del producto.
+            </p>
+            <p class="text muted">
+              Me interesa el frontend y construir experiencias claras y
+              rápidas.Aprender, testear y construir herramientas de software mas
+              alla del desarrollo web; Apps para mejorar la productividad y
+              comodidad tanto personal como del usuario
+            </p>
+            <p class="text muted">
+              <span class="chip"
+                >Objetivos: Entrar como junior y crecer construyendo.</span
+              >
+            </p>
+          </article>
+
+          <article class="card card-pad card-pad-loking-for">
+            <h3 class="h3">Lo que busco</h3>
+            <ul class="list muted">
+              <li>Empleo / Junior con mentoría y retos reales.</li>
+              <li>
+                Proyectos donde el código se revise, se mejore y se despliegue.
+              </li>
+              <li>Equipo que valore claridad, consistencia y aprendizaje.</li>
+            </ul>
+
+            <div class="divider-top">
+              <div class="kicker muted">CONTACTO RÁPIDO</div>
+              <a
+                class="btn btn-ghost"
+                target="_blank"
+                href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=DmwnWtMmVfjcVnkZbVRjJZxptXbsCTKJDSPvWFLBqrCLCBWknqVFtfCfZRTtrLzdXfGTGmCrsFxv"
+                >✉ enmanuel676hd@gmail.com</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="section section-gap">
+        <header class="section-header">
+          <div class="section-title-row">
+            <span class="tag">PROYECTOS</span>
+            <span class="line"></span>
+          </div>
+          <h2 class="h2">Tarjetas con demo + popup de detalles</h2>
+          <p class="text muted">
+            Botón “Ir a la página” + botón “!” para ver objetivo, tecnologías y
+            explicación.
+          </p>
+        </header>
+
+        <div class="projects-grid">
+          <!-- Proyecto 1 -->
+          <article class="card project-card">
+            <div class="project-media">
+              <img src="./src/project-1.png" alt="Around The U.S" />
+              <span class="badge">JavaScript</span>
+            </div>
+            <div class="project-body">
+              <div class="project-name">Around The U.S</div>
+              <div class="project-actions">
+                <a
+                  class="btn btn-ghost project-btn"
+                  href="https://enmanuel676.github.io/web_project_around/"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Ir a la página ↗</a
+                >
+                <button
+                  class="btn btn-ghost btn-icon"
+                  data-modal-open="modal-weather"
+                >
+                  !
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 2 -->
+          <article class="card project-card">
+            <div class="project-media">
+              <img src="./src/project-2.png" alt="De Patria a Patria" />
+              <span class="badge">CSS</span>
+            </div>
+            <div class="project-body">
+              <div class="project-name">De Patria a Patria</div>
+              <div class="project-actions">
+                <a
+                  class="btn btn-ghost project-btn"
+                  href="https://enmanuel676.github.io/web_project_4/"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Ir a la página ↗</a
+                >
+                <button
+                  class="btn btn-ghost btn-icon"
+                  data-modal-open="modal-task"
+                >
+                  !
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 3 -->
+          <article class="card project-card">
+            <div class="project-media">
+              <img src="./src/project-3.png" alt="Triple Espresso" />
+              <span class="badge">CSS</span>
+            </div>
+            <div class="project-body">
+              <div class="project-name">Triple Espresso</div>
+              <div class="project-actions">
+                <a
+                  class="btn btn-ghost project-btn"
+                  href="https://enmanuel676.github.io/web_project_3/"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Ir a la página ↗</a
+                >
+                <button
+                  class="btn btn-ghost btn-icon"
+                  data-modal-open="modal-shop"
+                >
+                  !
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="section section-gap">
+        <header class="section-header">
+          <div class="section-title-row">
+            <span class="tag">SKILLS</span>
+            <span class="line"></span>
+          </div>
+          <h2 class="h2">Lo que uso y lo que domino</h2>
+        </header>
+
+        <div class="grid-3">
+          <article class="card card-pad">
+            <div class="kicker muted">FRONTEND</div>
+            <div class="chips">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">React</span>
+            </div>
+          </article>
+
+          <article class="card card-pad">
+            <div class="kicker muted">HERRAMIENTAS</div>
+            <div class="chips">
+              <span class="chip">Git</span>
+              <span class="chip">GitHub</span>
+              <span class="chip">Vite</span>
+              <span class="chip">Figma (básico)</span>
+            </div>
+          </article>
+
+          <article class="card card-pad">
+            <div class="kicker muted">APIs</div>
+            <div class="chips">
+              <span class="chip">Fetch</span>
+              <span class="chip">REST</span>
+              <span class="chip">Async/Await</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section section-gap">
+        <header class="section-header">
+          <div class="section-title-row">
+            <span class="tag">CONTACTO</span>
+            <span class="line"></span>
+          </div>
+          <h2 class="h2">Hablemos</h2>
+          <p class="text muted">Siempre disponible para cualquier consulta.</p>
+        </header>
+
+        <div class="grid-2">
+          <article class="card card-pad">
+            <h3 class="h3">Email</h3>
+            <p class="text muted">Respondo más rápido por correo.</p>
+            <a
+              class="btn btn-primary"
+              target="_blank"
+              href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=DmwnWtMmVfjcVnkZbVRjJZxptXbsCTKJDSPvWFLBqrCLCBWknqVFtfCfZRTtrLzdXfGTGmCrsFxv"
+              >✉ enmanuel676hd@gmail.com</a
+            >
+          </article>
+
+          <article class="card card-pad">
+            <h3 class="h3">Links</h3>
+            <div class="hero-actions">
+              <a
+                class="btn btn-ghost"
+                href="https://github.com/Enmanuel676"
+                target="_blank"
+                rel="noreferrer"
+                >GitHub</a
+              >
+              <a
+                class="btn btn-ghost"
+                href="https://www.linkedin.com/in/enmanuel-hurtado-batista"
+                target="_blank"
+                rel="noreferrer"
+                >LinkedIn</a
+              >
+            </div>
+            <div class="divider-top small muted">
+              <b>Pocas palabras. Proyectos sólidos. Enlaces que funcionen</b>
+            </div>
+          </article>
+        </div>
+
+        <footer class="footer">
+          <div class="footer-row">
+            <div class="kicker muted">© 2026 Enmanuel</div>
+            <button class="btn btn-ghost" data-scroll="#home">↑ Arriba</button>
+          </div>
+        </footer>
+      </section>
+    </main>
+
+    <!-- NAV PÍLDORA -->
+    <div class="nav-wrap">
+      <nav class="nav-pill" aria-label="Navegación">
+        <button
+          class="nav-item"
+          data-scroll="#home"
+          title="Inicio"
+          aria-label="Inicio"
+        >
+          <!-- Home -->
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M3 10.5 12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1v-10.5z"
+            />
+          </svg>
+        </button>
+        <button
+          class="nav-item"
+          data-scroll="#about"
+          title="Sobre mí"
+          aria-label="Sobre mí"
+        >
+          <!-- User -->
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M20 21a8 8 0 1 0-16 0" />
+            <circle cx="12" cy="8" r="4" />
+          </svg>
+        </button>
+        <button
+          class="nav-item"
+          data-scroll="#projects"
+          title="Proyectos"
+          aria-label="Proyectos"
+        >
+          <!-- Folder -->
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M3 7a2 2 0 0 1 2-2h5l2 2h9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z"
+            />
+          </svg>
+        </button>
+        <button
+          class="nav-item"
+          data-scroll="#skills"
+          title="Skills"
+          aria-label="Skills"
+        >
+          <!-- Wrench -->
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M14.7 6.3a4.5 4.5 0 0 0-5.9 5.9L3 18l3 3 5.8-5.8a4.5 4.5 0 0 0 5.9-5.9l-3 3-2-2 3-3z"
+            />
+          </svg>
+        </button>
+        <button
+          class="nav-item"
+          data-scroll="#contact"
+          title="Contacto"
+          aria-label="Contacto"
+        >
+          <!-- Message -->
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8z"
+            />
+          </svg>
+        </button>
+      </nav>
+    </div>
+
+    <!-- MODALS -->
+    <div
+      class="modal"
+      id="modal-weather"
+      aria-hidden="true"
+      role="dialog"
+      aria-label="Detalles WeatherPulse"
+    >
+      <div class="modal-backdrop" data-modal-close></div>
+      <div class="modal-panel card">
+        <div class="modal-header">
+          <div>
+            <div class="kicker muted">PROYECTO</div>
+            <div class="modal-title">Around The U.S</div>
+          </div>
+          <button
+            class="btn btn-ghost btn-icon"
+            data-modal-close
+            aria-label="Cerrar"
+          >
+            ×
+          </button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <div class="kicker muted">OBJETIVO</div>
+            <p class="text muted">
+              Demostración de perfil de red social, publicaciones añadidas y una
+              UI limpia
+            </p>
+          </div>
+          <div>
+            <div class="kicker muted">TECNOLOGÍAS</div>
+            <div class="chips">
+              <span class="chip">JavaScript</span><span class="chip">API</span
+              ><span class="chip">CSS</span><span class="chip">HTML</span
+              ><span class="chip">React(En Desarrollo)</span
+              ><span class="chip">Vite(En Desarrollo)</span>
+            </div>
+          </div>
+          <div>
+            <div class="kicker muted">CÓMO SE HIZO</div>
+            <p class="text muted">
+              Fetch + loading/post + componentes reutilizables.
+            </p>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <a class="btn btn-primary" href="#" target="_blank" rel="noreferrer"
+            >Ver demo ↗</a
+          >
+          <button class="btn btn-ghost" data-modal-close>Cerrar</button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal"
+      id="modal-task"
+      aria-hidden="true"
+      role="dialog"
+      aria-label="Detalles TaskForge"
+    >
+      <div class="modal-backdrop" data-modal-close></div>
+      <div class="modal-panel card">
+        <div class="modal-header">
+          <div>
+            <div class="kicker muted">PROYECTO</div>
+            <div class="modal-title">De patria a Patria</div>
+          </div>
+          <button
+            class="btn btn-ghost btn-icon"
+            data-modal-close
+            aria-label="Cerrar"
+          >
+            ×
+          </button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <div class="kicker muted">OBJETIVO</div>
+            <p class="text muted">
+              Galería de arte e historia de ciudades de donde viven colegas de
+              la academia TripleTen (Practicum)
+            </p>
+          </div>
+          <div>
+            <div class="kicker muted">TECNOLOGÍAS</div>
+            <div class="chips">
+              <span class="chip">CSS</span><span class="chip">HTML</span
+              ><span class="chip">Web Responsive Desing (WRD)</span>
+            </div>
+          </div>
+          <div>
+            <div class="kicker muted">CÓMO SE HIZO</div>
+            <p class="text muted">
+              UI responsiva + persistencia + UX minimalista.
+            </p>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <a
+            class="btn btn-primary"
+            href="https://enmanuel676.github.io/web_project_4/"
+            target="_blank"
+            rel="noreferrer"
+            >Ver Página ↗</a
+          >
+          <button class="btn btn-ghost" data-modal-close>Cerrar</button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal"
+      id="modal-shop"
+      aria-hidden="true"
+      role="dialog"
+      aria-label="Detalles ShopLens"
+    >
+      <div class="modal-backdrop" data-modal-close></div>
+      <div class="modal-panel card">
+        <div class="modal-header">
+          <div>
+            <div class="kicker muted">PROYECTO</div>
+            <div class="modal-title">Triple Espresso</div>
+          </div>
+          <button
+            class="btn btn-ghost btn-icon"
+            data-modal-close
+            aria-label="Cerrar"
+          >
+            ×
+          </button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <div class="kicker muted">OBJETIVO</div>
+            <p class="text muted">
+              Cafetería especializada en granos de cafe certificados y tostados
+              localmente
+            </p>
+          </div>
+          <div>
+            <div class="kicker muted">TECNOLOGÍAS</div>
+            <div class="chips">
+              <span class="chip">HTML</span><span class="chip">CSS</span>
+            </div>
+          </div>
+          <div>
+            <div class="kicker muted">CÓMO SE HIZO</div>
+            <p class="text muted">Enlaces Externos + formulario + UI Limpia</p>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <a
+            class="btn btn-primary"
+            href="https://enmanuel676.github.io/web_project_3/"
+            target="_blank"
+            rel="noreferrer"
+            >Ver demo ↗</a
+          >
+          <button class="btn btn-ghost" data-modal-close>Cerrar</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./components/main.js"></script>
+  </body>
+</html>
