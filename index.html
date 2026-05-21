@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -34,7 +34,7 @@
     <!-- Sello (desktop) -->
     <div class="stamp">
       <div class="card stamp-card">
-        <div class="stamp-title">PORTFOLIO v1.1</div>
+        <div class="stamp-title">PORTFOLIO v1.2</div>
       </div>
     </div>
 
@@ -97,6 +97,8 @@
             <div class="stack">
               <div class="kicker muted">STACK ACTUAL</div>
               <div class="chips">
+                <span class="chip">Express.js 101</span>
+                <span class="chip">Node.js</span>
                 <span class="chip">React</span>
                 <span class="chip">JavaScript</span>
                 <span class="chip">HTML</span>
@@ -187,14 +189,14 @@
           <article class="card project-card">
             <div class="project-media">
               <img src="./src/project-1.png" alt="Around The U.S" />
-              <span class="badge">JavaScript</span>
+              <span class="badge">React</span>
             </div>
             <div class="project-body">
               <div class="project-name">Around The U.S</div>
               <div class="project-actions">
                 <a
                   class="btn btn-ghost project-btn"
-                  href="https://enmanuel676.github.io/web_project_around/"
+                  href="https://enmanuel676.github.io/web_project_around_react/"
                   target="_blank"
                   rel="noreferrer"
                   >Ir a la página ↗</a
@@ -260,6 +262,32 @@
               </div>
             </div>
           </article>
+
+          <!-- Proyecto 4 -->
+          <article class="card project-card">
+            <div class="project-media">
+              <img src="./src/project-backend.png" alt="Backend API" />
+              <span class="badge">Express.js</span>
+            </div>
+            <div class="project-body">
+              <div class="project-name">Backend API</div>
+              <div class="project-actions">
+                <a
+                  class="btn btn-ghost project-btn"
+                  href="https://github.com/Enmanuel676/web_project_around_express.git"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Ver código ↗</a
+                >
+                <button
+                  class="btn btn-ghost btn-icon"
+                  data-modal-open="modal-backend"
+                >
+                  !
+                </button>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -281,6 +309,14 @@
               <span class="chip">CSS</span>
               <span class="chip">JavaScript</span>
               <span class="chip">React</span>
+            </div>
+          </article>
+
+          <article class="card card-pad">
+            <div class="kicker muted">BACKEND</div>
+            <div class="chips">
+              <span class="chip">Node.js</span>
+              <span class="chip">Express.js</span>
             </div>
           </article>
 
@@ -495,10 +531,9 @@
           <div>
             <div class="kicker muted">TECNOLOGÍAS</div>
             <div class="chips">
-              <span class="chip">JavaScript</span><span class="chip">API</span
+              <span class="chip">React</span><span class="chip">API</span
               ><span class="chip">CSS</span><span class="chip">HTML</span
-              ><span class="chip">React(En Desarrollo)</span
-              ><span class="chip">Vite(En Desarrollo)</span>
+              ><span class="chip">Vite</span>
             </div>
           </div>
           <div>
@@ -509,8 +544,12 @@
           </div>
         </div>
         <div class="modal-actions">
-          <a class="btn btn-primary" href="#" target="_blank" rel="noreferrer"
-            >Ver demo ↗</a
+          <a
+            class="btn btn-primary"
+            href="https://enmanuel676.github.io/web_project_around_react/"
+            target="_blank"
+            rel="noreferrer"
+            >Ver Página ↗</a
           >
           <button class="btn btn-ghost" data-modal-close>Cerrar</button>
         </div>
@@ -621,7 +660,67 @@
             href="https://enmanuel676.github.io/web_project_3/"
             target="_blank"
             rel="noreferrer"
-            >Ver demo ↗</a
+            >Ver Página ↗</a
+          >
+          <button class="btn btn-ghost" data-modal-close>Cerrar</button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal"
+      id="modal-backend"
+      aria-hidden="true"
+      role="dialog"
+      aria-label="Detalles Backend API"
+    >
+      <div class="modal-backdrop" data-modal-close></div>
+      <div class="modal-panel card">
+        <div class="modal-header">
+          <div>
+            <div class="kicker muted">PROYECTO</div>
+            <div class="modal-title">Backend API</div>
+          </div>
+          <button
+            class="btn btn-ghost btn-icon"
+            data-modal-close
+            aria-label="Cerrar"
+          >
+            ×
+          </button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <div class="kicker muted">OBJETIVO</div>
+            <p class="text muted">
+              API básica para consultar y entregar datos de usuarios desde una
+              base de datos mediante el navegador o Postman.
+            </p>
+          </div>
+          <div>
+            <div class="kicker muted">TECNOLOGÍAS</div>
+            <div class="chips">
+              <span class="chip">Node.js</span
+              ><span class="chip">Express.js</span
+              ><span class="chip">API REST</span
+              ><span class="chip">Postman</span>
+            </div>
+          </div>
+          <div>
+            <div class="kicker muted">CÓMO SE HIZO</div>
+            <p class="text muted">
+              Rutas con Express + búsqueda por endpoints + respuestas JSON para
+              consumir datos de usuarios.
+            </p>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <a
+            class="btn btn-primary"
+            href="https://github.com/Enmanuel676/web_project_around_express.git"
+            target="_blank"
+            rel="noreferrer"
+            >Ver código ↗</a
           >
           <button class="btn btn-ghost" data-modal-close>Cerrar</button>
         </div>
