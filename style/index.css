@@ -279,6 +279,8 @@ body.theme-dark .bg-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  
+
 }
 .chip {
   border: 2px solid var(--border);

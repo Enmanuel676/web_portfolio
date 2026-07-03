@@ -34,7 +34,7 @@
     <!-- Sello (desktop) -->
     <div class="stamp">
       <div class="card stamp-card">
-        <div class="stamp-title">PORTFOLIO v1.2</div>
+        <div class="stamp-title">PORTFOLIO v1.3</div>
       </div>
     </div>
 
@@ -288,6 +288,30 @@
               </div>
             </div>
           </article>
+           <article class="card project-card">
+            <div class="project-media">
+              <img src="./src/los-pinos.png" alt="Backend API" />
+              <span class="badge">CSS</span>
+            </div>
+            <div class="project-body">
+              <div class="project-name">Los Pinos</div>
+              <div class="project-actions">
+                <a
+                  class="btn btn-ghost project-btn"
+                  href="https://lospinoshlg.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Ir a la página ↗</a
+                >
+                <button
+                  class="btn btn-ghost btn-icon"
+                  data-modal-open="modal-lospinos"
+                >
+                  !
+                </button>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -327,6 +351,8 @@
               <span class="chip">GitHub</span>
               <span class="chip">Vite</span>
               <span class="chip">Figma (básico)</span>
+              <span class="chip">Postman</span>
+              <span class="chip">Vercel</span>
             </div>
           </article>
 
@@ -718,6 +744,72 @@
           <a
             class="btn btn-primary"
             href="https://github.com/Enmanuel676/web_project_around_express.git"
+            target="_blank"
+            rel="noreferrer"
+            >Ver código ↗</a
+          >
+          <button class="btn btn-ghost" data-modal-close>Cerrar</button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal"
+      id="modal-lospinos"
+      aria-hidden="true"
+      role="dialog"
+      aria-label="Detalles Los Pinos"
+    >
+      <div class="modal-backdrop" data-modal-close></div>
+      <div class="modal-panel card">
+        <div class="modal-header">
+          <div>
+            <div class="kicker muted">PROYECTO</div>
+            <div class="modal-title"> Los Pinos </div>
+          </div>
+          <button
+            class="btn btn-ghost btn-icon"
+            data-modal-close
+            aria-label="Cerrar"
+          >
+            ×
+          </button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <div class="kicker muted">OBJETIVO</div>
+            <p class="text muted">
+              Sitio Web para promoción de Motel donde Los Pinos y la Naturaleza son los protagonistas 
+            </p>
+          </div>
+          <div>
+            <div class="kicker muted">TECNOLOGÍAS</div>
+            <div class="chips">
+              <span class="chip">HTML</span
+              >
+              <span class="chip">CSS</span
+              >
+              <span class="chip">JavaScript</span
+              >
+              <span class="chip">Express.js</span
+              >
+              <span class="chip">Node.js</span
+              >
+              <span class="chip">Git<span
+              >
+            </div>
+          </div>
+          <div>
+            <div class="kicker muted">CÓMO SE HIZO</div>
+            <p class="text muted">
+              Enlaces y Popups intuitivos. Interfaz minimalista y simple para una mejor experiencia de usuario. Acompañado de un diseño web responsivo, adaptado a la mayor cantidad de dispositivos. Este se encuantra alojado en Vercel bajo un dominio personalizado .com
+            </p>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <a
+            class="btn btn-primary"
+            href="https://github.com/Enmanuel676/los-pinos_web_project.git"
             target="_blank"
             rel="noreferrer"
             >Ver código ↗</a
