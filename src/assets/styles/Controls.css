@@ -1,0 +1,59 @@
+/* ===== Controls ===== */
+.controls {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 50;
+  display: flex;
+  gap: 10px;
+}
+.control-btn {
+  border: 2px solid var(--border);
+  background: rgba(255, 255, 255, 0.7);
+  color: #000;
+  padding: 10px 12px;
+  font-weight: 900;
+  box-shadow: 4px 4px 0 0 var(--shadow);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background-color var(--theme-fade) ease,
+    color var(--theme-fade) ease, border-color var(--theme-fade) ease,
+    box-shadow 150ms ease, transform 150ms ease;
+}
+body.theme-dark .control-btn {
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+}
+
+.control-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+/* ===== Icono ===== */
+.control-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  animation: control-icon-in 260ms ease;
+}
+
+@keyframes control-icon-in {
+  from {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .control-icon {
+    animation: none;
+  }
+}

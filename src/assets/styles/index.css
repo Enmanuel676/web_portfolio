@@ -1,0 +1,15 @@
+/* Punto de entrada de estilos: un archivo por componente de src/components. */
+
+/* Globales */
+@import "./base.css";
+@import "./common.css";
+
+/* Componentes */
+@import "./Controls.css";
+@import "./Header.css";
+@import "./Navbar.css";
+@import "./About.css";
+@import "./Projects.css";
+@import "./ProjectModal.css";
+@import "./Contact.css";
+@import "./Footer.css";

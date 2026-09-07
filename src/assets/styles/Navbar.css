@@ -1,0 +1,74 @@
+/* ===== Nav pill ===== */
+.nav-wrap {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  z-index: 55;
+  padding: 0 12px;
+}
+.nav-pill {
+  width: fit-content;
+  max-width: 92vw;
+  display: flex;
+  gap: 6px;
+  padding: 8px;
+
+  border: 2px solid var(--border);
+  border-radius: 999px;
+  box-shadow: 6px 6px 0 0 var(--shadow);
+
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  /* El desenfoque se declara siempre y solo cambia de intensidad, para que
+     el paso solid <-> glass pueda interpolarse en lugar de saltar. */
+  --nav-blur: 0px;
+  --nav-sat: 100%;
+  background: var(--nav-solid-bg);
+  backdrop-filter: blur(var(--nav-blur)) saturate(var(--nav-sat));
+  -webkit-backdrop-filter: blur(var(--nav-blur)) saturate(var(--nav-sat));
+  transition: background-color var(--theme-fade) ease,
+    border-color var(--theme-fade) ease, box-shadow var(--theme-fade) ease,
+    backdrop-filter var(--theme-fade) ease,
+    -webkit-backdrop-filter var(--theme-fade) ease;
+}
+.nav-pill::-webkit-scrollbar {
+  display: none;
+}
+
+body.nav-solid .nav-pill {
+  background: var(--nav-solid-bg);
+}
+body.nav-glass .nav-pill {
+  background: var(--glass-bg);
+  --nav-blur: var(--glass-blur);
+  --nav-sat: var(--glass-sat);
+}
+
+/* ===== Nav item ===== */
+.nav-item {
+  border: 2px solid transparent;
+  background: transparent;
+  border-radius: 999px;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  color: var(--text);
+}
+.nav-item:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+.nav-item.active {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+}

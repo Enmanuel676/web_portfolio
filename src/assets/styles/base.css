@@ -1,0 +1,102 @@
+/* ===== Reset / base ===== */
+* {
+  box-sizing: border-box;
+}
+:root {
+  color-scheme: light;
+}
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ===== Variables (light default) ===== */
+:root {
+  --bg: #f6f6f6;
+  --text: #0b0b0b;
+  --card: #ffffff;
+  --border: #0b0b0b;
+  --shadow: #000000;
+  --muted: rgba(0, 0, 0, 0.75);
+
+  --glass-bg: rgba(255, 255, 255, 0.22);
+  --glass-blur: 34px;
+  --glass-sat: 200%;
+
+  --nav-solid-bg: #ffffff;
+
+  --theme-fade: 320ms; /* duración del cambio de tema y del estilo de la barra */
+}
+
+body.theme-dark {
+  color-scheme: dark;
+  --bg: #0b0b0b;
+  --text: #ffffff;
+  --card: #0f0f0f;
+  --border: #ffffff;
+  --shadow: #ffffff;
+  --muted: rgba(255, 255, 255, 0.75);
+
+  --glass-bg: rgba(0, 0, 0, 0.2);
+  --nav-solid-bg: #0b0b0b;
+}
+
+html {
+  scroll-behavior: auto;
+} /* usamos scroll easing en JS */
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ===== Transición de tema =====
+   Los colores viven en custom properties, que no interpolan solas: la
+   transición se declara sobre las superficies que las consumen. Este bloque
+   va en base.css a propósito, para que cualquier transición propia de un
+   componente (definida en hojas importadas después) tenga prioridad. */
+body,
+.card,
+.chip,
+.tag,
+.line,
+.divider-top,
+.section-header,
+.bg-grid,
+.nav-pill,
+.control-btn,
+.project-card,
+.project-media,
+.project-btn,
+.badge,
+.modal-panel,
+.modal-backdrop {
+  transition: background-color var(--theme-fade) ease,
+    color var(--theme-fade) ease, border-color var(--theme-fade) ease,
+    box-shadow var(--theme-fade) ease, opacity var(--theme-fade) ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --theme-fade: 1ms;
+  }
+}
+
+/* ===== Fondo grid ===== */
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  background-size: 36px 36px;
+  background-image: linear-gradient(to right, var(--text) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--text) 1px, transparent 1px);
+}
+body.theme-dark .bg-grid {
+  opacity: 0.08;
+}
+

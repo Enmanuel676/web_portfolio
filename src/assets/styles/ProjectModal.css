@@ -1,0 +1,63 @@
+/* ===== Modal (with animation) ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 70;
+}
+.modal.open {
+  display: block;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* ===== Modal panel ===== */
+.modal-panel {
+  position: relative;
+  max-width: 820px;
+  margin: 4vh auto 0;
+  padding: 0;
+  overflow: hidden;
+
+  /* anim */
+  transform: translateY(18px) scale(0.98);
+  opacity: 0;
+  transition: transform 0.22s ease, opacity 0.22s ease;
+}
+
+.modal.open .modal-panel {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* ===== Modal content ===== */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border-bottom: 2px solid var(--border);
+}
+.modal-title {
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.modal-body {
+  padding: 18px;
+  display: grid;
+  gap: 16px;
+}
+.modal-actions {
+  padding: 18px;
+  border-top: 2px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
