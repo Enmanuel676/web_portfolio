@@ -1,7 +1,9 @@
 import { useEffect } from "react";
+import { useLanguage } from "../i18n/languageContext.js";
 
 function ProjectModal({ project, onClose }) {
   const isOpen = Boolean(project);
+  const { lang, t } = useLanguage();
 
   // ESC cierra y el body no hace scroll detrás del modal.
   useEffect(() => {
@@ -23,6 +25,7 @@ function ProjectModal({ project, onClose }) {
   if (!isOpen) return null;
 
   const href = project.modalLink ?? project.link;
+  const text = project.text[lang];
 
   return (
     <div
@@ -30,20 +33,20 @@ function ProjectModal({ project, onClose }) {
       id={project.id}
       role="dialog"
       aria-modal="true"
-      aria-label={`Detalles ${project.name}`}
+      aria-label={`${t.modal.detailsAria} ${project.name}`}
     >
       <div className="modal-backdrop" onClick={onClose}></div>
       <div className="modal-panel card">
         <div className="modal-header">
           <div>
-            <div className="kicker muted">PROYECTO</div>
+            <div className="kicker muted">{t.modal.kicker}</div>
             <div className="modal-title">{project.name}</div>
           </div>
           <button
             className="btn btn-ghost btn-icon"
             type="button"
             onClick={onClose}
-            aria-label="Cerrar"
+            aria-label={t.modal.close}
           >
             ×
           </button>
@@ -51,11 +54,11 @@ function ProjectModal({ project, onClose }) {
 
         <div className="modal-body">
           <div>
-            <div className="kicker muted">OBJETIVO</div>
-            <p className="text muted">{project.objective}</p>
+            <div className="kicker muted">{t.modal.objective}</div>
+            <p className="text muted">{text.objective}</p>
           </div>
           <div>
-            <div className="kicker muted">TECNOLOGÍAS</div>
+            <div className="kicker muted">{t.modal.tech}</div>
             <div className="chips">
               {project.tech.map((tech) => (
                 <span className="chip" key={tech}>
@@ -65,8 +68,8 @@ function ProjectModal({ project, onClose }) {
             </div>
           </div>
           <div>
-            <div className="kicker muted">CÓMO SE HIZO</div>
-            <p className="text muted">{project.how}</p>
+            <div className="kicker muted">{t.modal.how}</div>
+            <p className="text muted">{text.how}</p>
           </div>
         </div>
 
@@ -77,10 +80,10 @@ function ProjectModal({ project, onClose }) {
             target="_blank"
             rel="noreferrer"
           >
-            {project.modalLinkLabel}
+            {text.modalLinkLabel}
           </a>
           <button className="btn btn-ghost" type="button" onClick={onClose}>
-            Cerrar
+            {t.modal.close}
           </button>
         </div>
       </div>

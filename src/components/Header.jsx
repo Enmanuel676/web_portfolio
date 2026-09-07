@@ -1,18 +1,28 @@
+import { useLanguage } from "../i18n/languageContext.js";
 import { scrollToSelector } from "../utils/smoothScroll.js";
 
+const stack = [
+  "Express.js 101",
+  "Node.js",
+  "React",
+  "JavaScript",
+  "HTML",
+  "CSS",
+  "APIs",
+  "Git",
+];
+
 function Header() {
+  // `cvLink` ya viene resuelto al idioma activo: CV en español o en inglés.
+  const { t, cvLink } = useLanguage();
+
   return (
     <section id="home" className="section">
       <div className="grid-hero">
         <article className="card card-pad">
           <h1 className="h1">Enmanuel Hurtado</h1>
-          <p className="subhead">
-            Desarrollador Web Full-Stack — Especializado en Front-End
-          </p>
-          <p className="text muted">
-            Construyo apps web con enfoque práctico: UI limpia, lógica clara y
-            resultados medibles.
-          </p>
+          <p className="subhead">{t.header.subhead}</p>
+          <p className="text muted">{t.header.intro}</p>
 
           <div className="hero-actions">
             <button
@@ -20,15 +30,15 @@ function Header() {
               type="button"
               onClick={() => scrollToSelector("#projects")}
             >
-              Ver proyectos
+              {t.header.ctaProjects}
             </button>
             <a
               className="btn btn-ghost"
-              href="https://drive.google.com/file/d/1UIIUVuQLVy6xK-FfcDNlozmYd71_q9Jh/view?usp=sharing"
+              href={cvLink}
               target="_blank"
               rel="noreferrer"
             >
-              CV
+              {t.header.ctaCv}
             </a>
             <a
               className="btn btn-ghost"
@@ -49,30 +59,24 @@ function Header() {
           </div>
 
           <div className="divider-top small muted">
-            <b>Brutalismo minimalista</b>: alto contraste, bordes duros, pocas
-            florituras, mucha intención.
+            <b>{t.header.note1}</b>
+            {t.header.note2}
           </div>
         </article>
 
         <article className="card card-pad">
-          <div className="kicker muted">STATUS</div>
-          <h2 className="h2">Disponible para empleo / junior</h2>
-          <p className="text muted">
-            Me enfoco en proyectos con APIs, componentes reutilizables y
-            fundamentos sólidos.
-          </p>
+          <div className="kicker muted">{t.header.statusKicker}</div>
+          <h2 className="h2">{t.header.statusTitle}</h2>
+          <p className="text muted">{t.header.statusText}</p>
 
           <div className="stack">
-            <div className="kicker muted">STACK ACTUAL</div>
+            <div className="kicker muted">{t.header.stackKicker}</div>
             <div className="chips">
-              <span className="chip">Express.js 101</span>
-              <span className="chip">Node.js</span>
-              <span className="chip">React</span>
-              <span className="chip">JavaScript</span>
-              <span className="chip">HTML</span>
-              <span className="chip">CSS</span>
-              <span className="chip">APIs</span>
-              <span className="chip">Git</span>
+              {stack.map((item) => (
+                <span className="chip" key={item}>
+                  {item}
+                </span>
+              ))}
             </div>
           </div>
         </article>

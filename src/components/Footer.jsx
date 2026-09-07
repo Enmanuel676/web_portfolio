@@ -1,6 +1,9 @@
+import { useLanguage } from "../i18n/languageContext.js";
 import { scrollToSelector } from "../utils/smoothScroll.js";
 
 function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="footer">
       <div className="footer-row">
@@ -10,7 +13,7 @@ function Footer() {
           type="button"
           onClick={() => scrollToSelector("#home")}
         >
-          ↑ Arriba
+          {t.footer.top}
         </button>
       </div>
     </footer>

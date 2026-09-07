@@ -1,4 +1,6 @@
-// Botones flotantes de tema y estilo de barra (antes #btnTheme / #btnNav).
+import { useLanguage } from "../i18n/languageContext.js";
+
+// Botones flotantes de tema, estilo de barra e idioma (antes #btnTheme / #btnNav).
 // Los iconos son SVG en línea, con el mismo trazo que los del NavBar, en vez
 // de emojis: se tiñen con currentColor y siguen al tema.
 const icons = {
@@ -37,6 +39,7 @@ function ControlIcon({ name }) {
 }
 
 function Controls({ theme, navStyle, onToggleTheme, onToggleNavStyle }) {
+  const { lang, t, toggleLanguage } = useLanguage();
   const isDark = theme === "dark";
   const isGlass = navStyle === "glass";
 
@@ -45,8 +48,8 @@ function Controls({ theme, navStyle, onToggleTheme, onToggleNavStyle }) {
       <button
         className="control-btn"
         type="button"
-        title={isDark ? "Cambiar a tema claro" : "Cambiar a tema oscuro"}
-        aria-label="Cambiar tema"
+        title={isDark ? t.controls.themeToLight : t.controls.themeToDark}
+        aria-label={t.controls.themeAria}
         aria-pressed={isDark}
         onClick={onToggleTheme}
       >
@@ -55,12 +58,24 @@ function Controls({ theme, navStyle, onToggleTheme, onToggleNavStyle }) {
       <button
         className="control-btn"
         type="button"
-        title={isGlass ? "Barra sólida" : "Barra translúcida"}
-        aria-label="Cambiar estilo de navegación"
+        title={isGlass ? t.controls.navSolid : t.controls.navGlass}
+        aria-label={t.controls.navAria}
         aria-pressed={isGlass}
         onClick={onToggleNavStyle}
       >
         <ControlIcon name={isGlass ? "solid" : "glass"} />
+      </button>
+      <button
+        className="control-btn control-btn-lang"
+        type="button"
+        title={t.controls.languageTitle}
+        aria-label={t.controls.languageAria}
+        onClick={toggleLanguage}
+      >
+        {/* La key relanza la misma animación que usan los iconos. */}
+        <span key={lang} className="control-lang">
+          {t.controls.languageLabel}
+        </span>
       </button>
     </div>
   );

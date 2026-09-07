@@ -1,32 +1,38 @@
+import { useLanguage } from "../i18n/languageContext.js";
+
+// `key` apunta al título traducido; `items` sólo lleva nombres propios de
+// tecnologías, que no se traducen (salvo el paréntesis de Figma).
 const skillGroups = [
-  { title: "FRONTEND", items: ["HTML", "CSS", "JavaScript", "React"] },
-  { title: "BACKEND", items: ["Node.js", "Express.js"] },
+  { key: "frontend", items: ["HTML", "CSS", "JavaScript", "React"] },
+  { key: "backend", items: ["Node.js", "Express.js"] },
   {
-    title: "HERRAMIENTAS",
-    items: ["Git", "GitHub", "Vite", "Figma (básico)", "Postman", "Vercel"],
+    key: "tools",
+    items: ["Git", "GitHub", "Vite", "figma", "Postman", "Vercel"],
   },
-  { title: "APIs", items: ["Fetch", "REST", "Async/Await"] },
+  { key: "apis", items: ["Fetch", "REST", "Async/Await"] },
 ];
 
 function Skills() {
+  const { t } = useLanguage();
+
   return (
     <section id="skills" className="section section-gap">
       <header className="section-header">
         <div className="section-title-row">
-          <span className="tag">SKILLS</span>
+          <span className="tag">{t.skills.tag}</span>
           <span className="line"></span>
         </div>
-        <h2 className="h2">Lo que uso y lo que domino</h2>
+        <h2 className="h2">{t.skills.title}</h2>
       </header>
 
       <div className="grid-3">
         {skillGroups.map((group) => (
-          <article className="card card-pad" key={group.title}>
-            <div className="kicker muted">{group.title}</div>
+          <article className="card card-pad" key={group.key}>
+            <div className="kicker muted">{t.skills.groups[group.key]}</div>
             <div className="chips">
               {group.items.map((item) => (
                 <span className="chip" key={item}>
-                  {item}
+                  {item === "figma" ? t.skills.figma : item}
                 </span>
               ))}
             </div>

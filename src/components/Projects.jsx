@@ -1,23 +1,22 @@
 import { useCallback, useState } from "react";
 import { projects } from "../data/projects.js";
+import { useLanguage } from "../i18n/languageContext.js";
 import ProjectModal from "./ProjectModal.jsx";
 
 function Projects() {
   const [openProject, setOpenProject] = useState(null);
   const closeModal = useCallback(() => setOpenProject(null), []);
+  const { lang, t } = useLanguage();
 
   return (
     <section id="projects" className="section section-gap">
       <header className="section-header">
         <div className="section-title-row">
-          <span className="tag">PROYECTOS</span>
+          <span className="tag">{t.projects.tag}</span>
           <span className="line"></span>
         </div>
-        <h2 className="h2">Tarjetas con demo + popup de detalles</h2>
-        <p className="text muted">
-          Botón “Ir a la página” + botón “!” para ver objetivo, tecnologías y
-          explicación.
-        </p>
+        <h2 className="h2">{t.projects.title}</h2>
+        <p className="text muted">{t.projects.subtitle}</p>
       </header>
 
       <div className="projects-grid">
@@ -36,13 +35,13 @@ function Projects() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {project.linkLabel}
+                  {project.text[lang].linkLabel}
                 </a>
                 <button
                   className="btn btn-ghost btn-icon"
                   type="button"
                   onClick={() => setOpenProject(project)}
-                  aria-label={`Detalles de ${project.name}`}
+                  aria-label={`${t.projects.detailsAria} ${project.name}`}
                 >
                   !
                 </button>

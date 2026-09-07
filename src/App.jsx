@@ -23,7 +23,7 @@ function App() {
 
       <div className="stamp">
         <div className="card stamp-card">
-          <div className="stamp-title">PORTFOLIO v1.3</div>
+          <div className="stamp-title">PORTFOLIO v1.5</div>
         </div>
       </div>
 

@@ -57,3 +57,23 @@ body.theme-dark .control-btn {
     animation: none;
   }
 }
+
+/* ===== Botón de idioma ===== */
+/* Comparte caja con los de icono: mismo alto, y ancho mínimo para que "EN" y
+   "ES" no muevan el resto de la fila al alternar. */
+.control-btn-lang {
+  min-width: 44px;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  line-height: 20px;
+}
+.control-lang {
+  display: block;
+  animation: control-icon-in 260ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .control-lang {
+    animation: none;
+  }
+}

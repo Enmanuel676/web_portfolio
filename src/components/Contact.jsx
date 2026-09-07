@@ -1,21 +1,24 @@
 import Footer from "./Footer.jsx";
+import { useLanguage } from "../i18n/languageContext.js";
 
 function Contact() {
+  const { t } = useLanguage();
+
   return (
     <section id="contact" className="section section-gap">
       <header className="section-header">
         <div className="section-title-row">
-          <span className="tag">CONTACTO</span>
+          <span className="tag">{t.contact.tag}</span>
           <span className="line"></span>
         </div>
-        <h2 className="h2">Hablemos</h2>
-        <p className="text muted">Siempre disponible para cualquier consulta.</p>
+        <h2 className="h2">{t.contact.title}</h2>
+        <p className="text muted">{t.contact.subtitle}</p>
       </header>
 
       <div className="grid-2">
         <article className="card card-pad">
-          <h3 className="h3">Email</h3>
-          <p className="text muted">Respondo más rápido por correo.</p>
+          <h3 className="h3">{t.contact.emailTitle}</h3>
+          <p className="text muted">{t.contact.emailText}</p>
           <a
             className="btn btn-primary"
             target="_blank"
@@ -27,7 +30,7 @@ function Contact() {
         </article>
 
         <article className="card card-pad">
-          <h3 className="h3">Links</h3>
+          <h3 className="h3">{t.contact.linksTitle}</h3>
           <div className="hero-actions">
             <a
               className="btn btn-ghost"
@@ -47,7 +50,7 @@ function Contact() {
             </a>
           </div>
           <div className="divider-top small muted">
-            <b>Pocas palabras. Proyectos sólidos. Enlaces que funcionen</b>
+            <b>{t.contact.note}</b>
           </div>
         </article>
       </div>
