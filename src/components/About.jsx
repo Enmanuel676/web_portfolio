@@ -1,4 +1,4 @@
-import personPhoto from "../assets/images/person-photo.jpg";
+import personPhoto from "../assets/images/img-02.webp";
 import { useLanguage } from "../i18n/languageContext.js";
 
 const About = () => {
